@@ -1,0 +1,20 @@
+a
+{
+    color: #0070BB;
+    text-decoration: underline;
+}
+a:active
+{
+    color: red;
+    text-decoration: underline;
+}
+a:visited
+{
+    color: #0070BB;
+    text-decoration: none
+}
+a:hover
+{
+    color: #8F00FF;
+    text-decoration: none
+}
