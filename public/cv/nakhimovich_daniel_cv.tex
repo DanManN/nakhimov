@@ -16,7 +16,7 @@
 \addbibresource{pubs.bib}
 
 \newcommand{\nameuse}[1]{%
-\def\do##1{\settoggle{blx@use##1}{#1}}%
+	\def\do##1{\settoggle{blx@use##1}{#1}}%
 \dolistcsloop{blx@datamodel@names}}
 
 % \pagestyle{fancy}
@@ -48,7 +48,7 @@
 %--------------------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-	\item\small{
+\item\small{
 		\textbf{#1}{: #2 \vspace{-2pt}}
 	}
 }
@@ -57,7 +57,7 @@
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
 		\multirow{2}{*}{#1} & \textbf{#2} & #3 \\
-		& \textit{\small#4} & \textit{\small #5} \\
+				    & \textit{\small#4} & \textit{\small #5} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
@@ -66,22 +66,20 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label=]}
-		\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[label=$\bullet$]}
-		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 %--------------------------------------
+
 %%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%
-
-
 \begin{document}
 
 %--------------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{\href{http://localhost}{\Large Daniel Nakhimovich}} & Email : \href{dnahimov@gmail.com}{dnahimov@gmail.com}\\
-	\href{http://localhost}{-----------------------------------------} & Mobile : +1-551-795-5019 \\
+	\textbf{\href{http://dance.offinto.space}{\Large Daniel Nakhimovich}} & Email : \href{dnahimov@gmail.com}{dnahimov@gmail.com}\\
+	\href{http://dance.offinto.space}{-----------------------------------------} & Mobile : +1-551-795-5019 \\
 \end{tabular*}
-
+%--------------------------------------
 
 %-------------EDUCATION----------------
 \section{Education}
@@ -93,28 +91,85 @@
 \resumeSubheading
 {\includegraphics[width=23pt]{./images/cooper.png}}
 {The Cooper Union}{New York, NY}
-{Bachelor of Engineering in Electrical Engineering; GPA: 3.55}{Sept 2015 -- May. 2019}
+{Bachelor of Engineering in Electrical Engineering; GPA: 3.55}{Sept 2015 -- May 2019}
 \resumeSubHeadingListEnd
+%--------------------------------------
 
+%------------PUBLICATIONS--------------
+\section{Peer-Reviewed Publications}
+
+\nocite{*}
+\renewcommand*{\intitlepunct}{\addspace}
+\DeclareFieldFormat{title}{\mkbibbold{#1}}
+\DeclareFieldFormat{journaltitle}{\mkbibemph{#1\isdot}}
+\DeclareFieldFormat{issuetitle}{\mkbibemph{#1}}
+\DeclareFieldFormat{maintitle}{\mkbibemph{#1}}
+\DeclareFieldFormat{booktitle}{\mkbibemph{#1}}
+\nameuse{false}
+\printbibliography[heading=none]
+%--------------------------------------
 
 %--------------RESEARCH----------------
-
-%-------------EXPERIENCE---------------
-\section{Experience}
+\section{Research Projects}
 \resumeSubHeadingListStart
+\resumeSubheading
+{\includegraphics[width=23pt]{./images/pracsys.png}}
+{PRACSYS}{New Brunswick, NJ}
+{PI: Kostas Bekris}{Sept 2019 -- ...}
+\resumeItemListStart
+\resumeItem{Multi-object Rearrangement}
+{Manipulating most objects is simple for humans but hard for robots; taking a combinatorial perspective, the challenge is to minimize the number of grasps a robot makes to rearrange a set of objects in a confined environment. I developed a region graph structure to discretize the search of object dependencies. I also proposed and tested a number of heuristics to generate intermediate object configurations.}
+\resumeItem{Integrated Task and Motion Planning (iTAMP)}
+{iTAMP algorithms seeks to simulataneously reason about high level decisions (e.g. which object to hold in what order or which shelf to look for an item in) and the actual robot trajectories to perform the respective actions. I worked on describing an algorithmic framework that can perform iTAMP while retaining probablisitc completeness (high probability of eventually finding a solution) and asymptotic optimality (ensuring solutions found will converge to the best one).}
+\resumeItem{Put That There}
+{Human-Robot Interaction studies typically focus on robots understanding humans whereas this project studies how robots can be better understood by humans. I designed and performed expreriments to test human ability to interpret instructions given by a real robot.}
+\resumeItemListEnd
 \resumeSubheading
 {\includegraphics[width=23pt]{./images/dimacs.png}}
 {DIMACS}{Piscataway, NJ}
-{Undergraduate Researcher}{Summer 2018 -- 2019}
+{PI: James Abello}{Summer 2018 -- 2020}
 \resumeItemListStart
-\resumeItem{Support}
-{This work was partially supported by the Computer-Human Graph TeleDiscovery grant (IIS-1563971) under the direction of James Abello.}
 \resumeItem{k-connectivity}
-{k-connectivity is a connectivity measure for graphs. Designed two algorithms for finding approximations of minimum seperating sets of a graph in order to perform efficient graph decomposition for data visualization.}
+{k-connectivity is a connectivity measure for graphs. I designed two algorithms for finding approximations of minimum seperating sets of a graph in order to perform efficient graph decomposition for data visualization.}
 \resumeItem{Graph Peeling}
-{Graph Peeling is the iterative process of removing vertices from a graph. Explored properties of various graph peeling techniques and designed a new peeling algorithm (wave decomposition) in order to decompose very large graphs efficiently.}
+{Graph Peeling is the iterative process of removing vertices from a graph. I explored properties of various graph peeling techniques and designed a new peeling algorithm (wave decomposition) in order to decompose very large graphs efficiently.}
 \resumeItemListEnd
+\resumeSubHeadingListEnd
+%--------------------------------------
 
+%--------------PROJECTS----------------
+\section{One-off Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{2019; OpenSesame}
+{Open source cryptographic co-processor implemented on an FPGA}
+\resumeSubItem{2018; pass2act}
+{Passive to active sentence transformer built using spaCy's dependency tree parser}
+\resumeSubItem{2017; biboch}
+{Bitboard checkers implementation with an AI that performs a fast alpha/beta search on the game tree}
+\resumeSubItem{2016; 8-bit processor}
+{Custom 8-bit instruction set architecture written in verilog}
+\resumeItem{2015; 2048 Circuit}
+{A recreation of the popular mobile game 2048 using various CMOS ICs, buttons, and LEDs}
+\resumeSubHeadingListEnd
+%--------------------------------------
+
+%--------------TEACHING----------------
+\section{Teaching/Mentor Experience}
+\resumeSubHeadingListStart
+\resumeItem{Teaching Assistant; Rutgers University}{}
+\resumeItemListStart
+\resumeItem{2019}{\href{https://www.cs.rutgers.edu/academics/graduate/course-synopses/course-details/16-198-512-introduction-to-data-structures-and-algorithms}{512: Introduction to Data Structures and Algorithms}}
+\resumeItemListEnd
+\resumeItem{2015 --- 2016; Conceptheca}
+{Mentored Android developement intern}
+\resumeItem{2014 --- 2015; Fair Lawn High School}
+{Marching Band Woodwind Section Leader; Clarinet Tutor}
+\resumeSubHeadingListEnd
+%--------------------------------------
+
+%-------------EXPERIENCE---------------
+\section{Industry Experience}
+\resumeSubHeadingListStart
 \resumeSubheading
 {\includegraphics[width=23pt]{./images/pulsepoint.png}}
 {PulsePoint}{New York, NY}
@@ -139,24 +194,42 @@
 {An iOS application to help doctors keep track of the time and completion progress of the procedures to treat patients with septic shock}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
-
-
-%--------------PROJECTS----------------
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeSubItem{skEye Net}
-{Wireless eye tracking / gaze estimation headset that works in realtime; $1^{st}$ place at HackCooper 2018}
-\resumeSubItem{OpenSesame}
-{Open source cryptographic co-processor implemented on an FPGA}
-\resumeSubItem{pass2act}
-{Passive to active sentence transformer built using spaCy's dependency tree parser}
-\resumeSubItem{biboch}
-{Bitboard checkers implementation with an AI that performs a fast alpha/beta search on the game tree}
-\resumeSubItem{8-bit processor}
-{Custom 8-bit instruction set architecture written in verilog}
-\resumeSubHeadingListEnd
-
 %--------------------------------------
+
+%---------------SKILLS-----------------
+\section{Skills}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages}
+{C/C++/Objective-C, Python, Rust, Java, C\#, MATLAB, Verilog, Bash, HTML/CSS, Russian}
+\resumeSubItem{Robotics and Sensing Software}{OpenCV, CGAL, ROS, Gazebo}
+\resumeSubItem{Robots and Hardware}{Baxter, Xilinx FPGAs, 3D Printing}
+\resumeSubItem{Physics Engines}{Bullet, Godot, Unity}
+\resumeSubItem{Miscellaneous}{Docker}
+\resumeSubHeadingListEnd
+%--------------------------------------
+
+%---------------AWARDS-----------------
+\section{Awards}
+\resumeSubHeadingListStart
+\resumeSubItem{2018; HackCooper; $1^{st}$ prize}
+{skEye Net - Wireless eye tracking / gaze estimation headset that works in realtime}
+\resumeSubItem{2015 --- 2019; Half-tuition scholarship}{Merit scholarship from Cooper Union}
+\resumeSubItem{2015 --- 2019; Innovators Merit Scholarship}{Merit scholarship from Cooper Union}
+\resumeSubItem{2015; David Lee Memorial Scholarship}{For academic achievment and community service}
+\resumeSubHeadingListEnd
+%--------------------------------------
+
+\section{Miscellaneous}
+\resumeSubHeadingListStart
+\resumeSubItem{Peer Reviewes}{2019 - ...}
+\resumeItemListStart
+\resumeItem{CoRL}{Conference on Robot Learning}
+\resumeItem{RSS}{Robotics: Science and Systems Conference}
+\resumeItem{RA-L}{IEEE Robotics and Automation Letters}
+\resumeItem{BigVis}{Big Data Visual Exploration and Analytics Conference}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %------------AFFILIATIONS--------------
 % \section{Organizations}
@@ -164,28 +237,6 @@
 %                 \resumeSubItem{Rutgers Astronomical Society}
 %                 {}
 %         \resumeSubHeadingListEnd
-
 %--------------------------------------
 
-%------------PUBLICATIONS--------------
-\section{Publications}
-% \resumeSubHeadingListStart
-% \resumeSubItem{[Wafr58]}
-% {Rahul Shome, Daniel Nakhimovich, and Kostas E. Bekris, ``Pushing the Boundaries of Asymptotic Optimality in Integrated Task and Motion Planning'' in \textit{Submitted to The 14th International Workshop on the Algorithmic Foundations of Robotics}, WAFR, (2020).}
-% \resumeSubItem{[BigVis3]}
-% {James Abello and Daniel Nakhimovich, ``Graph Waves'' in \textit{International Workshop on Big Data Visual Exploration and Analytics with EDBT/ICDT}, BigVis, (2020).}
-% \resumeSubHeadingListEnd
-
-\nocite{*}
-\renewcommand*{\section}[2]{}
-\renewcommand*{\intitlepunct}{\addspace}
-\DeclareFieldFormat{title}{\mkbibbold{#1}}
-\DeclareFieldFormat{journaltitle}{\mkbibemph{#1\isdot}}
-\DeclareFieldFormat{issuetitle}{\mkbibemph{#1}}
-\DeclareFieldFormat{maintitle}{\mkbibemph{#1}}
-\DeclareFieldFormat{booktitle}{\mkbibemph{#1}}
-\nameuse{false}
-\printbibliography
-
-%--------------------------------------
 \end{document}
