@@ -12,7 +12,8 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{multirow}
-\usepackage[style=geschichtsfrkl,sorting=none]{biblatex}
+\usepackage{hanging}
+\usepackage[style=geschichtsfrkl,sorting=none,maxnames=8]{biblatex}
 \addbibresource{pubs.bib}
 
 \newcommand{\nameuse}[1]{%
@@ -107,6 +108,15 @@
 \DeclareFieldFormat{booktitle}{\mkbibemph{#1}}
 \nameuse{false}
 \printbibliography[heading=none]
+
+% \section{Upcoming Publications}
+% \begin{hangparas}{.25in}{1}
+% \textbf{Uniform Object Rearrangement: From Complete Monotone Primitives to Efficient Non-Monotone Informed Search}, by Rui Wang, Kai Gao, Daniel Nakhimovich, Jingjin Yu, and Kostas E. Bekris, submitted to \textit{IEEE International Conference on Robotics and Automation (ICRA)}, 2021.
+
+% \vspace{0.1in}
+% \textbf{Robotics as an Enabler of Resiliency to Disasters: Promises and Pitfalls}, by Rui Wang, Daniel Nakhimovich, Clinton J. Andrews, Fred Roberts, and Kostas E. Bekris, submitted to \textit{Lecture Notes in Computer Science / Lecture Notes in Artificial Intelligence (LNCS/LNAI)}, 2021.
+% \end{hangparas}
+% \vspace{0.2in}
 %--------------------------------------
 
 %--------------RESEARCH----------------
@@ -117,6 +127,8 @@
 {PRACSYS}{New Brunswick, NJ}
 {PI: Kostas Bekris}{Sept 2019 -- ...}
 \resumeItemListStart
+% \resumeItem{Human-robot Task Specification}
+% {}
 \resumeItem{Multi-object Rearrangement}
 {Manipulating most objects is simple for humans but hard for robots; taking a combinatorial perspective, the challenge is to minimize the number of grasps a robot makes to rearrange a set of objects in a confined environment. I developed a region graph structure to discretize the search of object dependencies. I also proposed and tested a number of heuristics to generate intermediate object configurations.}
 \resumeItem{Integrated Task and Motion Planning (iTAMP)}
@@ -211,6 +223,7 @@
 %---------------AWARDS-----------------
 \section{Awards}
 \resumeSubHeadingListStart
+\resumeSubItem{2021; Best Paper Award at BigVis}{Graph Cities: Their Buildings, Waves, and Fragments}
 \resumeSubItem{2018; HackCooper; $1^{st}$ prize}
 {skEye Net - Wireless eye tracking / gaze estimation headset that works in realtime}
 \resumeSubItem{2015 --- 2019; Half-tuition scholarship}{Merit scholarship from Cooper Union}
@@ -223,6 +236,7 @@
 \resumeSubHeadingListStart
 \resumeSubItem{Peer Reviewes}{2019 - ...}
 \resumeItemListStart
+\resumeItem{IROS}{Conference on Intelligent Robots and Systems}
 \resumeItem{CoRL}{Conference on Robot Learning}
 \resumeItem{RSS}{Robotics: Science and Systems Conference}
 \resumeItem{RA-L}{IEEE Robotics and Automation Letters}
