@@ -53,6 +53,11 @@
 		\textbf{#1}{: #2 \vspace{-2pt}}
 	}
 }
+\newcommand{\resumeBullet}[1]{
+\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
 
 \newcommand{\resumeSubheading}[5]{
 	\vspace{-1pt}\item
@@ -77,8 +82,8 @@
 
 %--------------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{\href{http://dance.offinto.space}{\Large Daniel Nakhimovich}} & Email : \href{dnahimov@gmail.com}{dnahimov@gmail.com}\\
-	\href{http://dance.offinto.space}{\underline{http://dance.offinto.space}} & Mobile : +1 551-795-5019 \\
+	\textbf{\href{http://dance.offinto.space}{\Large Daniel Nakhimovich}} & \href{dnahimov@gmail.com}{dnahimov@gmail.com}\\
+	\href{http://dance.offinto.space}{\underline{http://dance.offinto.space}} & +1 551-795-5019 \\
 \end{tabular*}
 %--------------------------------------
 
@@ -88,7 +93,7 @@
 \resumeSubheading
 {\includegraphics[width=23pt]{./images/rutgers.png}}
 {Rutgers University}{New Brunswick, NJ}
-{Doctor of Philosophy in Robotics; GPA: 3.94}{Sept 2019 -- May 2025}
+{Doctor of Philosophy in Computer Science \& Robotics; GPA: 3.97}{Sept 2019 -- May 2026}
 \resumeSubheading
 {\includegraphics[width=23pt]{./images/cooper.png}}
 {The Cooper Union}{New York, NY}
@@ -134,7 +139,7 @@
 \resumeItem{Robot Nudging}
 {A robot nudge is a robot behavious or ineherent design which alters a person's behaviour without significantly changing the incentive structure. I performed an extensive literature review of the subject in order to discover which ethical parameters are most urgent to consider for robot designers and policy makers.}
 \resumeItem{Object Rotation Task Descriptions for Robots in English}
-{I performed an informal survey, collecting human descriptions in English of household objects being rotated in a simulated environment. The goal is to study how people naturally describe tasks to a robot without assumptions of ``key words'' and ``wake phrases''.}
+{I performed an informal survey, collecting human descriptions in English of household objects being rotated in a simulated environment. The goal is to study how people naturally describe tasks to a robot without using ``key words'' or ``wake phrases''.}
 \resumeItem{Put That There}
 {Human-Robot Interaction studies typically focus on robots understanding humans whereas this project studies how robots can be better understood by humans. I designed and performed expreriments to test human ability to interpret instructions given by a real robot.}
 \resumeItemListEnd
@@ -177,13 +182,11 @@
 \resumeSubheading
 {\includegraphics[width=23pt]{./images/rutgers.png}}
 {Rutgers University}{New Brunswick, NJ}
-{}{}
-\resumeItemListStart
-\resumeItem{2020 -- 2021; Mentor}
-{Mentored undergraduate students in robotics projects.}
-\resumeItem{2019; Teaching Assistant}
-{\href{https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-512-introduction-to-data-structures-and-algorithms}{512: Introduction to Data Structures and Algorithms}}
-\resumeItemListEnd
+{Mentor to Undergraduate Students in Robotics}{2020 -- 2021}
+\begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
+	\vspace{-10pt}\\
+	~~~~~~ & \textit{\small Teaching Assistant for \href{https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-512-introduction-to-data-structures-and-algorithms}{Introduction to Data Structures and Algorithms}} & \textit{\small Fall 2019} \vspace{-10pt}\\
+\end{tabular*}
 \resumeSubheading
 {\includegraphics[width=23pt]{./images/conceptheca.png}}
 {Conceptheca}{Fair Lawn, NJ}
@@ -203,10 +206,10 @@
 {PulsePoint}{New York, NY}
 {TechOps Intern}{Summer 2017}
 \resumeItemListStart
-\resumeItem{QPS Monitoring}
-{QPS stands for queries per second. Optimized application metric collection/alerting to reduce the false positve rate of QPS drops.}
-\resumeItem{System Integrity}
-{Automated the backup and data verification of large (\url{~}100GB) databases.}
+\resumeBullet{Reduced false positive QPS (queries per second) alerts by 92\% by filtering out statistical outliers.}
+\resumeBullet{Implemented automated backups and data verification of ten 100GB databases using Bash scripts and SQL queries executed inside temporary Docker containers.}
+\resumeBullet{Physically diagnosed and reconfigured 2 servers, ensuring continuous uptime of critical application infrastructure.}
+\resumeBullet{Developed 3 new dashboards used for monitoring application reliability.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -214,12 +217,10 @@
 {Conceptheca}{Fair Lawn, NJ}
 {Mobile Application Developer}{2015 -- 2016}
 \resumeItemListStart
-\resumeItem{Blood-loss}
-{A mobile application on Android/iOS for doctors that calculates the maximum allowable blood-loss that a patient can undergo before reaching critical condition}
-\resumeItem{JAM Fractals}
-{A mobile game on Android OS that allows a player to mix ingredients to form seemingly random and chaotic fractal images}
-\resumeItem{Sepsis Clock}
-{An iOS application to help doctors keep track of the time and completion progress of the procedures to treat patients with septic shock}
+\resumeBullet{Identified key medical procedures, via collaborating with Doctors, that could use mobile applications to reduce a physician's workload 85\%.}
+\resumeBullet{Designed and implemented 2 applications (Android and iOS) to aid medical professionals to better monitor patients and administer medication.}
+\resumeBullet{Incorporated generative/procedural algorithms in a mobile application to create artistic high resolution images (4k) in less than 1 second.}
+\resumeBullet{Incorporated generative algorithms in a mobile app to create abstract art.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 %--------------------------------------
@@ -227,12 +228,11 @@
 %---------------SKILLS-----------------
 \section{Skills}
 \resumeSubHeadingListStart
-\resumeSubItem{Languages}
-{C/C++/Objective-C, Python, Rust, Java, C\#, MATLAB, Verilog, Bash, HTML/CSS, Russian}
-\resumeSubItem{Robotics and Sensing Software}{OpenCV, CGAL, ROS, Gazebo}
+\resumeSubItem{Programming Languages}
+{C/C++, C\#, Python, Linux, Java, Rust, MATLAB, Verilog, Bash, PHP, SQL, Ruby}
+\resumeSubItem{Software Libraries}{OpenCV, PyTorch, ROS, MuJoCo, Ollama, Unity, Docker, Boost, spaCy, MongoDB}
 \resumeSubItem{Robots and Hardware}{Baxter, Yaskawa Motoman, Xilinx FPGAs, 3D Printers}
-\resumeSubItem{Physics Engines}{Bullet, Godot, Unity}
-\resumeSubItem{Miscellaneous}{Docker, Boost}
+\resumeSubItem{Natural Languages}{English (Native), Russian (Conversant), Hebrew (Read Only)}
 \resumeSubHeadingListEnd
 %--------------------------------------
 
